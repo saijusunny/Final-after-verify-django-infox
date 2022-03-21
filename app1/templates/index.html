@@ -1,0 +1,198 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="container-fluid" style=" margin-left: 0; margin-right: 0;">
+    <!--Carosoul-->
+
+
+  <div class="row">  
+        <div class="col-12">
+
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <div class="carousel-inner" >
+                <div class="carousel-item">
+                    <img src="{% static 'image\car1.jpg'%}" alt="Los Angeles" style="width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src=" {% static 'image\car2.jpg'%}" alt="Chicago"  style="width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'image\car32.jpg'%}" alt="New York"  style="width: 100%;">
+                </div>
+                <div class="carousel-item active">
+                    <img src="{% static 'image\car4.jpg'%}" alt="Los Angeles"  style="width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'image\car5.jpg'%}" alt="Chicago"  style="width: 100%;">
+                </div>
+                </div>
+            
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                </a>
+            
+            </div>
+        </div>
+  </div>
+
+  <div class="row" style="text-align: center; margin-top: 2%;">
+
+   
+    <div class="col-12" style="color: #cdd; background-color: white; color: #232F3E; ">
+      <h2>Special Offer</h2>
+    </div>
+   
+  </div>
+
+  <!--first row-->
+
+
+  <div class="row" style="background-color: #cdd;">
+    <div class="col-12">
+      <div class="card-deck" style="padding-top: 2%; padding-bottom: 2%; ">
+        <div class="card bg-light" >
+          <div class="card-body text-center">
+              <h4>Up to 70% off | Electronics store</h4>
+              <img class="card-img-top" src="{% static 'image/1444.jpeg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">See more</a>
+          </div>
+        </div>
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              
+              <h4>Up to 15% off |Clothing essentials</h4>
+              <img class="card-img-top" src="{% static 'image/cloth.jpeg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">See more</a>
+              
+
+          </div>
+        </div>
+
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              <h4>Up to 30% off |Home products</h4>
+              <img class="card-img-top" src="{% static 'image\B06Y5GF9SF_Asins_372x232._SY232_CB409842837_.jpg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">See more</a>
+          </div>
+        </div>
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              <h4>Up to 90% off |Professional tools, testing & more</h4>
+              <img class="card-img-top" src="{% static 'image\tool,jpeg.jpg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">See more</a>
+           
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+ 
+
+  <!--Second row-->
+
+  <div class="row" style="text-align: center; margin-top: 2%;">
+
+   
+    <div class="col-12" style="color: #cdd; background-color: white; color: #232F3E; ">
+      <h2> Today's Deals</h2>
+    </div>
+   
+  </div>
+ 
+
+<div class="row" style="background-color: #cdd;">
+    <div class="col-12">
+      <div class="card-deck" style="padding-top: 2%;border: 0; padding-bottom: 2%;">
+        <div class="card bg-light" >
+          <div class="card-body text-center">
+              <h4>Laptops</h4>
+              <img class="card-img-top" src="{% static 'image/td1.jpg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">₹25,990.00-₹1,59,999.00</a>
+          </div>
+        </div>
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              
+              <h4>Mobile Phones</h4>
+              <img class="card-img-top" src="{% static 'image/td2.jpg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">₹5,000.00-₹26,990.00</a>
+              
+
+          </div>
+        </div>
+
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              <h4>Headsets</h4>
+              <img class="card-img-top" src="{% static 'image\td3.jpg'%}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">₹139.00-₹2799.00</a>
+              
+          </div>
+        </div>
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              <h4>Kitchen Products</h4>
+              <img class="card-img-top" src="{% static 'image\td4.jpg'%}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">₹139.00-₹62,69.00</a>
+           
+          </div>
+        </div>  
+      </div>
+    </div>
+  </div>
+ 
+
+
+  <!--third row-->
+
+  <div class="row" style="text-align: center; margin-top: 2%;">
+
+   
+    <div class="col-12" style="color: #cdd; background-color: white; color: #232F3E; ">
+      <h2> Top Search</h2>
+    </div>
+   
+  </div>
+ 
+
+  <div class="row" style="background-color: #cdd;">
+    <div class="col-12">
+      <div class="card-deck" style="padding-top: 2%;border: 0; padding-bottom: 2%;">
+        <div class="card bg-light" >
+          <div class="card-body text-center">
+              <h4>Laptops</h4>
+              <img class="card-img-top" src="{% static 'image/td3.1.jpg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">₹25,990.00-₹1,59,999.00</a>
+          </div>
+        </div>
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              
+              <h4>Mobile Phones</h4>
+              <img class="card-img-top" src="{% static 'image/td3.2.jpg' %}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">₹5,000.00-₹26,990.00</a>
+              
+
+          </div>
+        </div>
+
+        <div class="card bg-light">
+          <div class="card-body text-center">
+              <h4>Headsets</h4>
+              <img class="card-img-top" src="{% static 'image\td3.4.jpg'%}" alt="Card image" style="width:100%">
+              <a href="{%url 'loginpage'%}" class="stretched-link" style="text-decoration: none;">₹139.00-₹2799.00</a>
+              
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

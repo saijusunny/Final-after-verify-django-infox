@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\index.css'%}">
+</head>
+<body style="background-color: #cdd;">
+    
+    <nav class="navbar navbar-expand-md bg-dark  navbar-dark">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><span style="color: orangered;">AMZ</span> <span style="color: yellow;">FLIP</span></a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        {% if user.is_authenticated %}
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="{% url 'index'%}">Home</a>
+              </li> -->
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'home'%} active {% endif %}" href="{%url 'home'%}" >Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'upload_product'%} active {% endif %}"  href="{%url 'upload_product'%}" >Admin</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'about'%} active {% endif %}" href="{% url 'about' %}" >About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'curt_view'%} active {% endif %}" href="{%url 'curt_view'%}" >Curt</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'profile'%} active {% endif %}" href="{%url 'profile'%}" >Profile</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'ourpro'%} active {% endif %}" href="{% url 'ourpro'%}" >Our Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'adminlogout'%} active {% endif %}" href="{% url 'adminlogout'%}" >Logout</a>
+          </li>
+            </ul>
+          </div>
+        {% else %}
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link {% if request.resolver_match.url_name == 'index'%} active {% endif %}" active href="{% url 'index'%}" >Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'adminlogin'%} active {% endif %}" href="{% url 'adminlogin'%}" >Login</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'usercreate'%} active {% endif %}" href="{% url 'usercreate'%}" >Sign Up</a>
+              </li>
+          </ul>
+        </div>
+        {% endif %}
+      </nav>
+      {% block content %}
+
+      {% endblock %}
+
+      <div class="row" style=" background-color: #343a40; padding-top: 10%; padding-bottom: 10%; margin-top: 2%;">
+        <div class="col">
+
+          <div class="card-deck" style="text-align: left;">
+            <div class="card" style="border: 0;">
+              <div class="card-body text-center" style=" background-color: #343a40;">
+                <h4 style="color: white;">Get to Know Us</h4>
+                <ul style="text-decoration: none; list-style-type: none;">
+                 
+                 <a href="about.html">  <li  class="footer">About Us</li></a>
+                 <a href="Contact.html">  <li  class="footer">Contact Us</li></a>
+                 <a href="#"> <li  class="footer">Press Releases</li></a>
+                 <a href="#"> <li  class="footer">Amazon Cares</li></a>
+                 <a href="#">  <li  class="footer">Gift a Smile</li></a>
+                  
+                </ul>
+
+              </div>
+            </div>
+            <div class="card" style="border: 0 ;">
+              <div class="card-body text-center" style=" background-color: #343a40;">
+                <h4 style="color: white;">Connect with Us</h4>
+                <ul style="text-decoration: none; list-style-type: none;">
+                 
+                 <a href="#">  <li  class="footer">Facebook</li></a>
+                 <a href="#"> <li  class="footer">Twitter</li></a>
+                 <a href="#"> <li  class="footer">Instagram</li></a>
+                  
+                </ul>
+
+              </div>
+            </div>
+            <div class="card" style="border: 0;">
+              <div class="card-body text-center" style=" background-color: #343a40;">
+                <h4 style="color: white;">Make Money with Us</h4>
+                <ul style="text-decoration: none; list-style-type: none;">
+                 
+                 <a href="#">  <li  class="footer">Sell on Amazon </li></a>
+                 <a href="#"> <li  class="footer">Sell under Amazon Accelerator</li></a>
+                 <a href="#"> <li  class="footer">Amazon Global Selling</li></a>
+                 <a href="#">  <li  class="footer">Become an Affiliate</li></a>
+                 <a href="#">  <li  class="footer">Fulfilment by Amazon</li></a>
+                 <a href="#">  <li  class="footer">Advertise Your Products</li></a>
+                 <a href="#">  <li  class="footer">Amazon Pay on Merchants</li></a>
+
+                  
+                </ul>
+
+              </div>
+            </div>
+            <div class="card" style="border: 0;">
+              <div class="card-body text-center" style=" background-color: #343a40;">
+                <h4 style="color: white;">Let Us Help You</h4>
+                <ul style="text-decoration: none; list-style-type: none;">
+                 
+                 <a href="#">  <li  class="footer">COVID-19 and Amazon</li></a>
+                 <a href="#"> <li  class="footer">Your Account</li></a>
+                 <a href="#"> <li  class="footer">Returns Centre</li></a>
+                 <a href="#">  <li  class="footer">100% Purchase Protection</li></a>
+                  <a href="#"> <li  class="footer">Amazon App Download</li></a>
+                  <a href="#">  <li  class="footer">Amazon Assistant Download</li></a>
+
+                </ul>
+
+
+              </div>
+          </div>
+        </div>
+      </div>
+</div>
+</body>
+</html>

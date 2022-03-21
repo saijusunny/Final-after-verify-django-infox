@@ -1,0 +1,33 @@
+.container{
+    background-image:url('static/image/wp2679108.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#aj{
+    color: blue;
+}
+.navbar-nav {
+    margin-left: auto;
+}
+.footer{
+    color: yellow;
+    text-decoration: none;
+
+}
+
+.footer:hover{
+    color: orangered;
+    text-decoration: none;
+
+}
+
+#join{
+    color: orangered;
+    text-decoration: none;
+    text-emphasis: none;
+}
+#join:hover{
+    color: rgb(146, 41, 3);
+
+}

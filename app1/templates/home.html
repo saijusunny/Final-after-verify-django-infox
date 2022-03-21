@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="containser m-5" >
+    <div class="row" >
+        {% for t in titles %}
+        <div class="col-md-3">
+            <div class="card m-4" style="width: 18rem;height: auto;text-align: center;">
+                <img class="card-img-top" style=" height: 300px; width: 18rem;" src="{{ t.itmes.url }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ t.title }}</h5>
+                    <h5 class="card-title">Price:&nbsp;₹{{ t.price }}</h5>
+                    <a href="{%url 'shop' t.id%}"><button class="btn btn-danger" >SHOP</button></a>
+                    <a href="{%url 'cart' t.id%}"><button class="btn btn-success">CART</button> </a> 
+                </div>
+            </div>
+        </div>
+    
+        {% empty %}
+            <h2>
+                No Products
+            </h2>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
